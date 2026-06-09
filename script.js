@@ -1,4 +1,4 @@
-const URL_FLOW = "https://script.google.com/macros/s/AKfycbxNZaf8Vupbm9E2GF-ufyBmHvgsWTHEi9Nr0cGBGg3KJC3f8b_m-JAvrZVoh9w-y8Om/exec";
+const URL_FLOW = "https://script.google.com/macros/s/AKfycbyZm2LqVST-WbLkrX8w5hzCIsNDVQigOyNSYegcDBsxT5DMEU2GTLZd8wTbXRPtZhFQ/exec";
 
 let dataGlobal = [];
 
@@ -7,7 +7,7 @@ const dep = document.getElementById("departamento");
 const prov = document.getElementById("provincia");
 const dist = document.getElementById("distrito");
 
-// 🔥 Cargar JSON
+// 🔥 Cargara JSON
 fetch("ubigeo.json")
   .then(response => response.json())
   .then(data => {
