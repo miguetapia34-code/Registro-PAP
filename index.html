@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro PAP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>📋 Registro Venta PAP</h2>
+
+  <form id="formulario">
+
+    <input type="number" id="venta" placeholder="Nro Venta PAP" required>
+    <input type="text" id="sot" placeholder="N° SOT" required>
+    <input type="text" id="pdv" placeholder="PDV" required>
+    <input type="text" id="coordinador" placeholder="Coordinador" required>
+    <input type="text" id="contacto" placeholder="Contacto" required>
+
+    <!-- Combobox -->
+    <select id="departamento" required></select>
+    <select id="provincia" required></select>
+    <select id="distrito" required></select>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+  <h3>🧾 Plantilla:</h3>
+  <pre id="resultado"></pre>
+  <button onclick="copiar()">📋 Copiar</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
