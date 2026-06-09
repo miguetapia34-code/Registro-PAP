@@ -1,0 +1,44 @@
+[
+  {"departamento":"PIURA","provincia":"PIURA","distrito":"PIURA"},
+  {"departamento":"PIURA","provincia":"PIURA","distrito":"CASTILLA"},
+  {"departamento":"PIURA","provincia":"SULLANA","distrito":"SULLANA"},
+  {"departamento":"PIURA","provincia":"TALARA","distrito":"PARIÑAS"},
+  {"departamento":"PIURA","provincia":"PAITA","distrito":"PAITA"},
+  {"departamento":"PIURA","provincia":"SECHURA","distrito":"SECHURA"},
+
+  {"departamento":"LAMBAYEQUE","provincia":"CHICLAYO","distrito":"CHICLAYO"},
+  {"departamento":"LAMBAYEQUE","provincia":"CHICLAYO","distrito":"LA VICTORIA"},
+  {"departamento":"LAMBAYEQUE","provincia":"CHICLAYO","distrito":"JOSÉ LEONARDO ORTIZ"},
+  {"departamento":"LAMBAYEQUE","provincia":"FERREÑAFE","distrito":"FERREÑAFE"},
+  {"departamento":"LAMBAYEQUE","provincia":"LAMBAYEQUE","distrito":"LAMBAYEQUE"},
+
+  {"departamento":"LA LIBERTAD","provincia":"TRUJILLO","distrito":"TRUJILLO"},
+  {"departamento":"LA LIBERTAD","provincia":"TRUJILLO","distrito":"EL PORVENIR"},
+  {"departamento":"LA LIBERTAD","provincia":"TRUJILLO","distrito":"LA ESPERANZA"},
+  {"departamento":"LA LIBERTAD","provincia":"ASCOPE","distrito":"ASCOPE"},
+  {"departamento":"LA LIBERTAD","provincia":"VIRU","distrito":"VIRU"},
+  {"departamento":"LA LIBERTAD","provincia":"PACASMAYO","distrito":"PACASMAYO"},
+
+  {"departamento":"TUMBES","provincia":"TUMBES","distrito":"TUMBES"},
+  {"departamento":"TUMBES","provincia":"TUMBES","distrito":"CORRALES"},
+  {"departamento":"TUMBES","provincia":"ZARUMILLA","distrito":"ZARUMILLA"},
+  {"departamento":"TUMBES","provincia":"CONTRALMIRANTE VILLAR","distrito":"ZORRITOS"},
+
+  {"departamento":"ANCASH","provincia":"SANTA","distrito":"CHIMBOTE"},
+  {"departamento":"ANCASH","provincia":"SANTA","distrito":"NUEVO CHIMBOTE"},
+  {"departamento":"ANCASH","provincia":"HUARAZ","distrito":"HUARAZ"},
+  {"departamento":"ANCASH","provincia":"CASMA","distrito":"CASMA"},
+  {"departamento":"ANCASH","provincia":"HUARI","distrito":"HUARI"},
+
+  {"departamento":"CAJAMARCA","provincia":"CAJAMARCA","distrito":"CAJAMARCA"},
+  {"departamento":"CAJAMARCA","provincia":"JAEN","distrito":"JAEN"},
+  {"departamento":"CAJAMARCA","provincia":"CUTERVO","distrito":"CUTERVO"},
+  {"departamento":"CAJAMARCA","provincia":"SAN IGNACIO","distrito":"SAN IGNACIO"},
+  {"departamento":"CAJAMARCA","provincia":"CHOTA","distrito":"CHOTA"},
+
+  {"departamento":"AMAZONAS","provincia":"CHACHAPOYAS","distrito":"CHACHAPOYAS"},
+  {"departamento":"AMAZONAS","provincia":"BAGUA","distrito":"BAGUA"},
+  {"departamento":"AMAZONAS","provincia":"UTCUBAMBA","distrito":"BAGUA GRANDE"},
+  {"departamento":"AMAZONAS","provincia":"RODRIGUEZ DE MENDOZA","distrito":"MENDOZA"},
+  {"departamento":"AMAZONAS","provincia":"CONDORCANQUI","distrito":"NIEVA"}
+]
