@@ -7,7 +7,7 @@ const dep = document.getElementById("departamento");
 const prov = document.getElementById("provincia");
 const dist = document.getElementById("distrito");
 
-// 🔥 Cargara JSON
+// 🔥 Cargar JSON
 fetch("ubigeo.json")
   .then(response => response.json())
   .then(data => {
@@ -18,35 +18,35 @@ fetch("ubigeo.json")
     console.error("Error cargando ubigeo:", error);
   });
 
-// 📍 Cargar departamentos
+// 📍 Departamentos
 function cargarDepartamentos() {
   const departamentos = [...new Set(dataGlobal.map(d => d.departamento))];
 
-  dep.innerHTML = `<option value="">Seleccione departamento</option>`;
+  dep.innerHTML = '<option value="">Seleccione departamento</option>';
 
   departamentos.forEach(d => {
-    dep.innerHTML += `<option value="${d}">${d}</option>`;
+    dep.innerHTML += '<option value="' + d + '">' + d + '</option>';
   });
 }
 
-// 📍 Evento Departamento
-dep.addEventListener("change", () => {
+// 📍 Provincias
+dep.addEventListener("change", function() {
   const provincias = dataGlobal
     .filter(d => d.departamento === dep.value)
     .map(d => d.provincia);
 
-  const provinciasUnicas = [...new Set(provincias)];
+  const unicos = [...new Set(provincias)];
 
-  prov.innerHTML = `<option value="">Seleccione provincia</option>`;
+  prov.innerHTML = '<option value="">Seleccione provincia</option>';
   dist.innerHTML = "";
 
-  provinciasUnicas.forEach(p => {
-    prov.innerHTML += `<option value="${p}">${p}</option>`;
+  unicos.forEach(p => {
+    prov.innerHTML += '<option value="' + p + '">' + p + '</option>';
   });
 });
 
-// 📍 Evento Provincia
-prov.addEventListener("change", () => {
+// 📍 Distritos
+prov.addEventListener("change", function() {
   const distritos = dataGlobal
     .filter(d =>
       d.departamento === dep.value &&
@@ -54,17 +54,18 @@ prov.addEventListener("change", () => {
     )
     .map(d => d.distrito);
 
-  dist.innerHTML = `<option value="">Seleccione distrito</option>`;
+  dist.innerHTML = '<option value="">Seleccione distrito</option>';
 
   distritos.forEach(d => {
-    dist.innerHTML += `<option value="${d}">${d}</option>`;
+    dist.innerHTML += '<option value="' + d + '">' + d + '</option>';
   });
 });
 
 // 📋 FORMULARIO
-document.getElementById("formulario").addEventListener("submit", async (e) => {
+document.getElementById("formulario").addEventListener("submit", async function(e) {
   e.preventDefault();
 
+  // ✅ Todos los datos para plantilla
   const data = {
     venta: document.getElementById("venta").value,
     sot: document.getElementById("sot").value,
@@ -76,6 +77,7 @@ document.getElementById("formulario").addEventListener("submit", async (e) => {
     distrito: dist.value
   };
 
+  // ✅ TU PLANTILLA COMPLETA
   const plantilla = `VENTA PAP NRO: ${data.venta}
 ✅VALIDACIÓN BIOMETRICA: OK
 ✅SOT: ${data.sot}
@@ -89,18 +91,22 @@ document.getElementById("formulario").addEventListener("submit", async (e) => {
 ✅ACCION: PROCEDER CON EL ENRUTAMIENTO A LA CUADRILLA DE INSTALACIONES PAP 
 ✅${data.departamento} – ${data.provincia} - ${data.distrito}`;
 
+  // Mostrar plantilla
   document.getElementById("resultado").textContent = plantilla;
 
   try {
+    // ✅ SOLO ENVÍA SOT AL GOOGLE SHEETS
+    const formData = new FormData();
+    formData.append("sot", data.sot);
+
     await fetch(URL_FLOW, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
+      mode: "no-cors",
+      body: formData
     });
 
     alert("✅ Guardado correctamente");
+
   } catch (error) {
     alert("❌ Error al guardar");
     console.error(error);
