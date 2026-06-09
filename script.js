@@ -1,4 +1,4 @@
-const URL_FLOW = "https://script.google.com/macros/s/AKfycbxNekT72HtRGiw7KMBq7fzVbS3EyNmTMdHd3L6CxurC8A2CRVXFHaI0QDaJnc99850e/exec";
+const URL_FLOW = "https://script.google.com/macros/s/AKfycbwsyTjn1GJzlPAbiWaFK4jnelPfKepqKPBuFOO904KAPXzsXr-jTLKfn2wtEHb6VIS7/exec";
 
 let dataGlobal = [];
 
@@ -9,90 +9,81 @@ const dist = document.getElementById("distrito");
 
 // 🔥 Cargar JSON
 fetch("ubigeo.json")
-  .then(response => response.json())
-  .then(data => {
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
     dataGlobal = data;
     cargarDepartamentos();
   })
-  .catch(error => {
+  .catch(function(error) {
     console.error("Error cargando ubigeo:", error);
   });
 
 // 📍 Cargar departamentos
 function cargarDepartamentos() {
-  const departamentos = [...new Set(dataGlobal.map(d => d.departamento))];
+  const departamentos = [...new Set(dataGlobal.map(function(d) {
+    return d.departamento;
+  }))];
 
-  dep.innerHTML = `<option value="">Seleccione departamento</option>`;
+  dep.innerHTML = '<option value="">Seleccione departamento</option>';
 
-  departamentos.forEach(d => {
-    dep.innerHTML += `<option value="${d}">${d}</option>`;
+  departamentos.forEach(function(d) {
+    dep.innerHTML += '<option value="' + d + '">' + d + '</option>';
   });
 }
 
 // 📍 Evento Departamento
-dep.addEventListener("change", () => {
+dep.addEventListener("change", function() {
   const provincias = dataGlobal
-    .filter(d => d.departamento === dep.value)
-    .map(d => d.provincia);
+    .filter(function(d) {
+      return d.departamento === dep.value;
+    })
+    .map(function(d) {
+      return d.provincia;
+    });
 
   const provinciasUnicas = [...new Set(provincias)];
 
-  prov.innerHTML = `<option value="">Seleccione provincia</option>`;
+  prov.innerHTML = '<option value="">Seleccione provincia</option>';
   dist.innerHTML = "";
 
-  provinciasUnicas.forEach(p => {
-    prov.innerHTML += `<option value="${p}">${p}</option>`;
+  provinciasUnicas.forEach(function(p) {
+    prov.innerHTML += '<option value="' + p + '">' + p + '</option>';
   });
 });
 
 // 📍 Evento Provincia
-prov.addEventListener("change", () => {
+prov.addEventListener("change", function() {
   const distritos = dataGlobal
-    .filter(d =>
-      d.departamento === dep.value &&
-      d.provincia === prov.value
-    )
-    .map(d => d.distrito);
+    .filter(function(d) {
+      return d.departamento === dep.value &&
+             d.provincia === prov.value;
+    })
+    .map(function(d) {
+      return d.distrito;
+    });
 
-  dist.innerHTML = `<option value="">Seleccione distrito</option>`;
+  dist.innerHTML = '<option value="">Seleccione distrito</option>';
 
-  distritos.forEach(d => {
-    dist.innerHTML += `<option value="${d}">${d}</option>`;
+  distritos.forEach(function(d) {
+    dist.innerHTML += '<option value="' + d + '">' + d + '</option>';
   });
 });
 
 // 📋 FORMULARIO
-document.getElementById("formulario").addEventListener("submit", async (e) => {
+document.getElementById("formulario").addEventListener("submit", async function(e) {
   e.preventDefault();
 
   const data = {
-    venta: document.getElementById("venta").value,
-    sot: document.getElementById("sot").value,
-    pdv: document.getElementById("pdv").value,
-    coordinador: document.getElementById("coordinador").value,
-    contacto: document.getElementById("contacto").value,
-    departamento: dep.value,
-    provincia: prov.value,
-    distrito: dist.value
+    sot: document.getElementById("sot").value
   };
 
-  const plantilla = `VENTA PAP NRO: ${data.venta}
-✅VALIDACIÓN BIOMETRICA: OK
-✅SOT: ${data.sot}
-✅PDV: ${data.pdv}
-✅COORDENADOR: ${data.coordinador}
-✅VALIDACION COMERCIAL: FILTRO DEUDA CLIENTE
-✅COORDENADAS: 
-✅Contacto: ${data.contacto}
-✅AUTORIZADO: 
-✅CAMPAÑA: PAP
-✅ACCION: PROCEDER CON EL ENRUTAMIENTO A LA CUADRILLA DE INSTALACIONES PAP 
-✅${data.departamento} – ${data.provincia} - ${data.distrito}`;
-
-  document.getElementById("resultado").textContent = plantilla;
+  document.getElementById("resultado").textContent =
+    "✅ SOT registrado: " + data.sot;
 
   try {
-    await fetch(URL_FLOW, {
+    const res = await fetch(URL_FLOW, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -100,7 +91,9 @@ document.getElementById("formulario").addEventListener("submit", async (e) => {
       body: JSON.stringify(data)
     });
 
+    console.log("Respuesta:", res);
     alert("✅ Guardado correctamente");
+
   } catch (error) {
     alert("❌ Error al guardar");
     console.error(error);
