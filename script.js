@@ -61,7 +61,6 @@ prov.addEventListener("change", () => {
   });
 });
 
-
 // 📋 FORMULARIO
 document.getElementById("formulario").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -81,7 +80,7 @@ document.getElementById("formulario").addEventListener("submit", async (e) => {
 ✅VALIDACIÓN BIOMETRICA: OK
 ✅SOT: ${data.sot}
 ✅PDV: ${data.pdv}
-✅COORDINADOR: ${data.coordinador}
+✅COORDENADOR: ${data.coordinador}
 ✅VALIDACION COMERCIAL: FILTRO DEUDA CLIENTE
 ✅COORDENADAS: 
 ✅Contacto: ${data.contacto}
@@ -92,7 +91,6 @@ document.getElementById("formulario").addEventListener("submit", async (e) => {
 
   document.getElementById("resultado").textContent = plantilla;
 
-  // ☁️ Enviar a Power Automate
   try {
     await fetch(URL_FLOW, {
       method: "POST",
@@ -108,7 +106,6 @@ document.getElementById("formulario").addEventListener("submit", async (e) => {
     console.error(error);
   }
 });
-
 
 // 📋 Copiar
 function copiar() {
