@@ -83,12 +83,15 @@ document.getElementById("formulario").addEventListener("submit", async function(
     "✅ SOT registrado: " + data.sot;
 
   try {
-    const res = await fetch(URL_FLOW, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
+    
+await fetch(URL_FLOW, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+
     });
 
     console.log("Respuesta:", res);
