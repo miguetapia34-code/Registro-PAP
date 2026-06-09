@@ -1,4 +1,4 @@
-const URL_FLOW = "TU_URL_POWER_AUTOMATE";
+const URL_FLOW = "https://script.google.com/macros/s/AKfycbxDKcZZ_LHQZOyvSFzB9W47brw2ggINVAywsdVSGdKo9YVR5iT4BT0sMOg18mOI763e/exec";
 
 let dataGlobal = [];
 
