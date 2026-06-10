@@ -73,15 +73,20 @@ prov.addEventListener("change", function() {
 });
 
 
+  // ✅ ✅ PDV (FIJO Y FUNCIONANDO)	
   const filtrados = pdvData.filter(p =>
-    p.departamento.toUpperCase() === dep.value.toUpperCase()
+    p.departamento.trim().toUpperCase() === dep.value.trim().toUpperCase()
   );
+
+  console.log("Departamento:", dep.value);
+  console.log("Filtrados:", filtrados);
 
   pdv.innerHTML = '<option value="">Seleccione PDV</option>';
 
   filtrados.forEach(p => {
     pdv.innerHTML += `<option value="${p.pdv}">${p.pdv}</option>`;
   });
+
 
 
 // 📋 FORMULARIO
