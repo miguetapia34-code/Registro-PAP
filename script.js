@@ -1,11 +1,13 @@
 const URL_FLOW = "https://script.google.com/macros/s/AKfycbyZm2LqVST-WbLkrX8w5hzCIsNDVQigOyNSYegcDBsxT5DMEU2GTLZd8wTbXRPtZhFQ/exec";
 
 let dataGlobal = [];
+let pdvData = [];
 
 // Selectores
 const dep = document.getElementById("departamento");
 const prov = document.getElementById("provincia");
 const dist = document.getElementById("distrito");
+const pdvs = document.getElementById("pdv");
 
 // 🔥 Cargar JSON
 fetch("ubigeo.json")
@@ -16,6 +18,15 @@ fetch("ubigeo.json")
   })
   .catch(error => {
     console.error("Error cargando ubigeo:", error);
+  });
+// 🔥 Cargar JSON PDV
+fetch("pdv.json")
+  .then(response => response.json())
+  .then(data => {
+    pdvData = data;
+  })
+  .catch(error => {
+    console.error("Error cargando pdv:", error);
   });
 
 // 📍 Departamentos
@@ -60,6 +71,18 @@ prov.addEventListener("change", function() {
     dist.innerHTML += '<option value="' + d + '">' + d + '</option>';
   });
 });
+
+
+  const filtrados = pdvData.filter(p =>
+    p.departamento.toUpperCase() === dep.value.toUpperCase()
+  );
+
+  pdv.innerHTML = '<option value="">Seleccione PDV</option>';
+
+  filtrados.forEach(p => {
+    pdv.innerHTML += `<option value="${p.pdv}">${p.pdv}</option>`;
+  });
+
 
 // 📋 FORMULARIO
 document.getElementById("formulario").addEventListener("submit", async function(e) {

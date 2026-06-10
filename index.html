@@ -14,14 +14,33 @@
 
     <input type="number" id="venta" placeholder="Nro Venta PAP" required>
     <input type="text" id="sot" placeholder="N° SOT" required>
-    <input type="text" id="pdv" placeholder="PDV" required>
-    <input type="text" id="coordinador" placeholder="Coordinador" required>
-    <input type="text" id="contacto" placeholder="Contacto" required>
-
+    	
     <!-- Combobox -->
     <select id="departamento" required></select>
     <select id="provincia" required></select>
     <select id="distrito" required></select>
+    <select id="pdv" required></select>
+
+     	
+    <input type="text" id="coordinador" placeholder="Coordinador" required>
+    <input type="text" id="validacion" placeholder="Validación comercial">
+    <input type="text" id="coordenadas" placeholder="Coordenadas (-lat,long)">
+    <input type="text" id="contacto" placeholder="Contacto Cliente" required>
+    
+    <!-- ✅ Autorizado -->
+    <input type="text" id="autorizado" placeholder="Autorizado">
+
+    <!-- ✅ Campaña -->
+    <select id="campania">
+     <option value="PAP" selected>PAP</option>
+     <option value="Caravana">CARAVANA</option>
+    </select>
+
+    <select id="biometrico" required>
+    	<option value="OK">VALIDACIÓN BIOMETRICA: OK</option>
+    	<option value="NO">VALIDACIÓN BIOMETRICA: NO</option>
+    </select>
+
 
     <button type="submit">Enviar</button>
 

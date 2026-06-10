@@ -19,11 +19,14 @@ h2 {
 }
 
 input, select {
-  width: 100%;
+width: 100%;
   padding: 10px;
   margin: 8px 0;
   border-radius: 8px;
   border: 1px solid #ccc;
+  box-sizing: border-box; /* 🔥 clave */
+  height: 42px; /* 🔥 los iguala */
+
 }
 
 button {
