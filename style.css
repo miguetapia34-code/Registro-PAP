@@ -4,18 +4,13 @@ body {
   margin: 0;
   padding: 10px;
 }
-/*
+
 .container {
   width: 100%;
-  padding: 18px;
-  box-sizing: border-box;
-}*/
-.container {
-  width: 100%;
-  max-width: 1500px;
+  max-width: 1450px;
   margin: auto;
   background: white;
-  padding: 15px;
+  padding: 18px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   box-sizing: border-box;
