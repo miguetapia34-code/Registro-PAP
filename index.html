@@ -14,7 +14,7 @@
   <form id="formulario">
 
     <input type="number" id="venta" placeholder="Nro Venta PAP" required>
-    <input type="text" id="sot" placeholder="N° SOT" required>
+    <input type="tel" id="sot" placeholder="N° SOT" inputmode="numeric" pattern="[0-9]*" required>
     	
     <!-- Combobox -->
     <select id="departamento" required></select>
@@ -40,7 +40,7 @@
     <button type="button" onclick="obtenerUbicacion()">
    📍 Obtener ubicación
     </button>
-    <input type="text" id="contacto" placeholder="Contacto Cliente" required>
+    <input type="tel" id="contacto" placeholder="Contacto Cliente" inputmode="numeric" pattern="[0-9]*" required>
     
     <!-- ✅ Autorizado -->
     <input type="text" id="autorizado" placeholder="Autorizado">
