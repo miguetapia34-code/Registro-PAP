@@ -1,12 +1,12 @@
-[
-  {"departamento":"ANCASH","provincia":"AIJA","distrito":"AIJA"},{"departamento":"ANCASH","provincia":"AIJA","distrito":"CORIS"},
-  
+[ 
   {"departamento":"PIURA","provincia":"PIURA","distrito":"PIURA"},
   {"departamento":"PIURA","provincia":"PIURA","distrito":"CASTILLA"},
   {"departamento":"PIURA","provincia":"SULLANA","distrito":"SULLANA"},
   {"departamento":"PIURA","provincia":"TALARA","distrito":"PARIÑAS"},
   {"departamento":"PIURA","provincia":"PAITA","distrito":"PAITA"},
   {"departamento":"PIURA","provincia":"SECHURA","distrito":"SECHURA"},
+
+  {"departamento":"ANCASH","provincia":"AIJA","distrito":"AIJA"},
 
   {"departamento":"LAMBAYEQUE","provincia":"CHICLAYO","distrito":"CHICLAYO"},
   {"departamento":"LAMBAYEQUE","provincia":"CHICLAYO","distrito":"LA VICTORIA"},
