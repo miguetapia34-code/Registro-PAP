@@ -154,7 +154,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
 ✅VALIDACIÓN BIOMETRICA: ${data.biometrico}
 ✅SOT: ${data.sot}
 ✅PDV: ${data.pdv}
-✅COORDENADOR: ${data.coordinador}
+✅COORDINADOR: ${data.coordinador}
 ✅VALIDACION COMERCIAL: ${data.validacion}
 ✅COORDENADAS: ${data.coordenadas}
 🗺️ MAPA: ${linkMapa}
