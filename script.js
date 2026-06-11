@@ -16,6 +16,7 @@ fetch("ubigeo.json")
   .then(data => {
     dataGlobal = data;
     cargarDepartamentos();
+    restaurarDatos();
   })
   .catch(error => {
     console.error("Error cargando ubigeo:", error);
@@ -177,6 +178,12 @@ document.getElementById("formulario").addEventListener("submit", async function(
       body: formData
     });
 
+    // Guardar últimos datos usados
+    localStorage.setItem("departamento", dep.value);
+    localStorage.setItem("provincia", prov.value);
+    localStorage.setItem("distrito", dist.value);
+    localStorage.setItem("pdv", pdvs.value);
+    localStorage.setItem("coordinador", document.getElementById("coordinador").value);
     alert("✅ Guardado correctamente");
 
   } catch (error) {
@@ -190,4 +197,41 @@ function copiar() {
   const texto = document.getElementById("resultado").textContent;
   navigator.clipboard.writeText(texto);
   alert("Copiado ✅");
+}
+
+function restaurarDatos() {
+
+  const depGuardado = localStorage.getItem("departamento");
+  const provGuardada = localStorage.getItem("provincia");
+  const distGuardado = localStorage.getItem("distrito");
+  const pdvGuardado = localStorage.getItem("pdv");
+  const coordGuardado = localStorage.getItem("coordinador");
+
+  if (!depGuardado) return;
+
+  // Departamento
+  dep.value = depGuardado;
+  dep.dispatchEvent(new Event("change"));
+
+  setTimeout(() => {
+
+    // Provincia
+    prov.value = provGuardada;
+    prov.dispatchEvent(new Event("change"));
+
+    setTimeout(() => {
+
+      // Distrito
+      dist.value = distGuardado;
+
+      // PDV
+      pdvs.value = pdvGuardado;
+
+      // Coordinador
+      document.getElementById("coordinador").value = coordGuardado;
+
+    }, 200);
+
+  }, 200);
+
 }
