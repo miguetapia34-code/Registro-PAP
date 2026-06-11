@@ -92,6 +92,8 @@ function cargarPDV() {
 
 }
 
+let linkMapa = "";
+
 function obtenerUbicacion() {
 
   if (!navigator.geolocation) {
