@@ -108,14 +108,13 @@ function obtenerUbicacion() {
       document.getElementById("coordenadas").value =
         `${lat}, ${lon}`;
 
-      document.getElementById("mapa").value =
-        `https://www.google.com/maps?q=${lat},${lon}`;
+      linkMapa = `https://www.google.com/maps?q=${lat},${lon}`;
 
     },
     function(error) {
       alert("No se pudo obtener la ubicación");
       console.error(error);
-    }
+    },
 
     {
       enableHighAccuracy: true,
@@ -155,6 +154,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
 ✅COORDENADOR: ${data.coordinador}
 ✅VALIDACION COMERCIAL: ${data.validacion}
 ✅COORDENADAS: ${data.coordenadas}
+🗺️ MAPA: ${linkMapa}
 ✅Contacto: ${data.contacto}
 ✅AUTORIZADO: ${data.autorizado}
 ✅CAMPAÑA: ${data.campania}
