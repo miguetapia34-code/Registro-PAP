@@ -2,10 +2,14 @@ body {
   font-family: Arial, sans-serif;
   background: #eef2f6;
   margin: 0;
-  padding: 10px;
+  padding: 0;
 }
-
 .container {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+/*.container {
   width: 100%;
   max-width: 500px;
   margin: auto;
@@ -14,7 +18,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   box-sizing: border-box;
-}
+}*/
 
 h2 {
   text-align: center;
@@ -53,6 +57,16 @@ button:active {
 }
 
 pre {
+  background: #dcf8c6; /* color tipo WhatsApp */
+  padding: 12px;
+  border-radius: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 14px;
+  border-left: 4px solid #25D366;
+}
+/*
+pre {
   background: #f8fafc;
   padding: 12px;
   border-radius: 10px;
@@ -60,7 +74,7 @@ pre {
   word-wrap: break-word;
   font-size: 14px;
 }
-
+*/
 @media (max-width: 480px) {
 
   .container {
