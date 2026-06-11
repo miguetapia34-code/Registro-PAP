@@ -1,4 +1,5 @@
 const URL_FLOW = "https://script.google.com/macros/s/AKfycbyZm2LqVST-WbLkrX8w5hzCIsNDVQigOyNSYegcDBsxT5DMEU2GTLZd8wTbXRPtZhFQ/exec";
+navigator.geolocation
 
 let dataGlobal = [];
 let pdvData = [];
@@ -88,6 +89,31 @@ function cargarPDV() {
         ${p.pdv}
       </option>`;
   });
+
+}
+
+function obtenerUbicacion() {
+
+  if (!navigator.geolocation) {
+    alert("Tu navegador no soporta geolocalización");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    function(posicion) {
+
+      const lat = posicion.coords.latitude;
+      const lon = posicion.coords.longitude;
+
+      document.getElementById("coordenadas").value =
+        `${lat}, ${lon}`;
+
+    },
+    function(error) {
+      alert("No se pudo obtener la ubicación");
+      console.error(error);
+    }
+  );
 
 }
 
