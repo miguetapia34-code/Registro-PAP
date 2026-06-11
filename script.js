@@ -84,7 +84,7 @@ prov.addEventListener("change", function() {
   pdv.innerHTML = '<option value="">Seleccione PDV</option>';
 
   filtrados.forEach(p => {
-    pdv.innerHTML += `<option value="${p.pdv}">${p.pdv}</option>`;
+    pdvs.innerHTML += `<option value="${p.pdv}">${p.pdv}</option>`;
   });
 
 
