@@ -54,6 +54,7 @@ dep.addEventListener("change", function() {
   unicos.forEach(p => {
     prov.innerHTML += '<option value="' + p + '">' + p + '</option>';
   });
+  cargarPDV();
 });
 
 // 📍 Distritos
@@ -73,21 +74,22 @@ prov.addEventListener("change", function() {
 });
 
 
-  // ✅ ✅ PDV (FIJO Y FUNCIONANDO)	
+function cargarPDV() {
+
   const filtrados = pdvData.filter(p =>
     p.departamento.trim().toUpperCase() === dep.value.trim().toUpperCase()
   );
 
-  console.log("Departamento:", dep.value);
-  console.log("Filtrados:", filtrados);
-
-  pdv.innerHTML = '<option value="">Seleccione PDV</option>';
+  pdvs.innerHTML = '<option value="">Seleccione PDV</option>';
 
   filtrados.forEach(p => {
-    pdvs.innerHTML += `<option value="${p.pdv}">${p.pdv}</option>`;
+    pdvs.innerHTML += `
+      <option value="${p.pdv}">
+        ${p.pdv}
+      </option>`;
   });
 
-
+}
 
 // 📋 FORMULARIO
 document.getElementById("formulario").addEventListener("submit", async function(e) {
