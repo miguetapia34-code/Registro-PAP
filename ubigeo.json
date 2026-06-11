@@ -1,9 +1,5 @@
 [
-  {"departamento":"ANCASH","provincia":"AIJA","distrito":"AIJA"},
-  {"departamento":"ANCASH","provincia":"AIJA","distrito":"CORIS"},
-  {"departamento":"ANCASH","provincia":"AIJA","distrito":"HUACLLAN"},
-  {"departamento":"ANCASH","provincia":"AIJA","distrito":"LA MERCED"},
-  {"departamento":"ANCASH","provincia":"AIJA","distrito":"SUCCHA"},
+  {"departamento":"ANCASH","provincia":"AIJA","distrito":"AIJA"},{"departamento":"ANCASH","provincia":"AIJA","distrito":"CORIS"},
   
   {"departamento":"PIURA","provincia":"PIURA","distrito":"PIURA"},
   {"departamento":"PIURA","provincia":"PIURA","distrito":"CASTILLA"},
