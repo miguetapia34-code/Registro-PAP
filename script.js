@@ -108,14 +108,26 @@ function obtenerUbicacion() {
       document.getElementById("coordenadas").value =
         `${lat}, ${lon}`;
 
+      document.getElementById("mapa").value =
+        `https://www.google.com/maps?q=${lat},${lon}`;
+
     },
     function(error) {
       alert("No se pudo obtener la ubicación");
       console.error(error);
     }
+
+    {
+      enableHighAccuracy: true,
+      timeout: 15000,
+      maximumAge: 0
+    }
   );
 
 }
+
+const mapa =
+`https://www.google.com/maps?q=${lat},${lon}`;
 
 // 📋 FORMULARIO
 document.getElementById("formulario").addEventListener("submit", async function(e) {
@@ -129,6 +141,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
     coordinador: document.getElementById("coordinador").value,
     validacion: document.getElementById("validacion").value,
     coordenadas: document.getElementById("coordenadas").value,
+    mapa: document.getElementById("mapa").value,
     contacto: document.getElementById("contacto").value,
     autorizado: document.getElementById("autorizado").value,
     campania: document.getElementById("campania").value,
@@ -149,6 +162,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
 ✅Contacto: ${data.contacto}
 ✅AUTORIZADO: ${data.autorizado}
 ✅CAMPAÑA: ${data.campania}
+🗺️ MAPA: ${data.mapa}
 ✅ACCION: PROCEDER CON EL ENRUTAMIENTO A LA CUADRILLA DE INSTALACIONES PAP 
 ✅${data.departamento} – ${data.provincia} - ${data.distrito}`;
 
