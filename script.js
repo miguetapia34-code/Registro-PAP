@@ -114,7 +114,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
 
   // ✅ TU PLANTILLA COMPLETA
   const plantilla = `VENTA PAP NRO: ${data.venta}
-✅VALIDACIÓN BIOMETRICA: OK
+✅VALIDACIÓN BIOMETRICA: ${data.biometrico}
 ✅SOT: ${data.sot}
 ✅PDV: ${data.pdv}
 ✅COORDENADOR: ${data.coordinador}
