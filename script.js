@@ -113,11 +113,11 @@ document.getElementById("formulario").addEventListener("submit", async function(
 ✅SOT: ${data.sot}
 ✅PDV: ${data.pdv}
 ✅COORDENADOR: ${data.coordinador}
-✅VALIDACION COMERCIAL: FILTRO DEUDA CLIENTE
-✅COORDENADAS: 
+✅VALIDACION COMERCIAL: ${data.validacion}
+✅COORDENADAS: ${data.coordenadas}
 ✅Contacto: ${data.contacto}
-✅AUTORIZADO: 
-✅CAMPAÑA: PAP
+✅AUTORIZADO: ${data.autorizado}
+✅CAMPAÑA: ${data.campania}
 ✅ACCION: PROCEDER CON EL ENRUTAMIENTO A LA CUADRILLA DE INSTALACIONES PAP 
 ✅${data.departamento} – ${data.provincia} - ${data.distrito}`;
 
