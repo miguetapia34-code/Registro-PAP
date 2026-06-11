@@ -16,7 +16,6 @@ fetch("ubigeo.json")
   .then(data => {
     dataGlobal = data;
     cargarDepartamentos();
-    restaurarDatos();
   })
   .catch(error => {
     console.error("Error cargando ubigeo:", error);
@@ -26,6 +25,7 @@ fetch("pdv.json")
   .then(response => response.json())
   .then(data => {
     pdvData = data;
+    restaurarDatos();
   })
   .catch(error => {
     console.error("Error cargando pdv:", error);
