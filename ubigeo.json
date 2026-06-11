@@ -173,6 +173,19 @@
   {"departamento":"ANCASH","provincia":"YUNGAY","distrito":"SHUPLUY"},
   {"departamento":"ANCASH","provincia":"YUNGAY","distrito":"YANAMA"},
 
+  {"departamento":"LA LIBERTAD","provincia":"TRUJILLO","distrito":"TRUJILLO"},
+  {"departamento":"LA LIBERTAD","provincia":"TRUJILLO","distrito":"EL PORVENIR"},
+  {"departamento":"LA LIBERTAD","provincia":"TRUJILLO","distrito":"LA ESPERANZA"},
+  {"departamento":"LA LIBERTAD","provincia":"ASCOPE","distrito":"ASCOPE"},
+  {"departamento":"LA LIBERTAD","provincia":"VIRU","distrito":"VIRU"},
+  {"departamento":"LA LIBERTAD","provincia":"PACASMAYO","distrito":"PACASMAYO"},
+
+  {"departamento":"CAJAMARCA","provincia":"CAJAMARCA","distrito":"CAJAMARCA"},
+  {"departamento":"CAJAMARCA","provincia":"JAEN","distrito":"JAEN"},
+  {"departamento":"CAJAMARCA","provincia":"CUTERVO","distrito":"CUTERVO"},
+  {"departamento":"CAJAMARCA","provincia":"SAN IGNACIO","distrito":"SAN IGNACIO"},
+  {"departamento":"CAJAMARCA","provincia":"CHOTA","distrito":"CHOTA"},
+
   {"departamento":"LAMBAYEQUE","provincia":"CHICLAYO","distrito":"CHICLAYO"},
   {"departamento":"LAMBAYEQUE","provincia":"CHICLAYO","distrito":"LA VICTORIA"},
   {"departamento":"LAMBAYEQUE","provincia":"CHICLAYO","distrito":"JOSÉ LEONARDO ORTIZ"},
