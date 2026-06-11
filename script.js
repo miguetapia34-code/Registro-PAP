@@ -126,9 +126,6 @@ function obtenerUbicacion() {
 
 }
 
-const mapa =
-`https://www.google.com/maps?q=${lat},${lon}`;
-
 // 📋 FORMULARIO
 document.getElementById("formulario").addEventListener("submit", async function(e) {
   e.preventDefault();
