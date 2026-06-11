@@ -101,7 +101,12 @@ document.getElementById("formulario").addEventListener("submit", async function(
     sot: document.getElementById("sot").value,
     pdv: document.getElementById("pdv").value,
     coordinador: document.getElementById("coordinador").value,
+    validacion: document.getElementById("validacion").value,
+    coordenadas: document.getElementById("coordenadas").value,
     contacto: document.getElementById("contacto").value,
+    autorizado: document.getElementById("autorizado").value,
+    campania: document.getElementById("campania").value,
+    biometrico: document.getElementById("biometrico").value,
     departamento: dep.value,
     provincia: prov.value,
     distrito: dist.value
