@@ -150,7 +150,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
   };
 
   // ✅ TU PLANTILLA COMPLETA
-  const plantilla = `VENTA PAP NRO: ${data.venta}
+  const plantilla = `VENTA PAP NRO: //${data.venta}
 ✅VALIDACIÓN BIOMETRICA: ${data.biometrico}
 ✅SOT: ${data.sot}
 ✅PDV: ${data.pdv}
@@ -171,7 +171,11 @@ document.getElementById("formulario").addEventListener("submit", async function(
     // ✅ SOLO ENVÍA SOT AL GOOGLE SHEETS
     const formData = new FormData();
     formData.append("sot", data.sot);
-
+    formData.append("pdv", data.pdv);
+    formData.append("coordinador", data.coordinador);
+    formData.append("contacto", data.contacto);
+    formData.append("coordenadas", data.coordenadas);
+    
     await fetch(URL_FLOW, {
       method: "POST",
       mode: "no-cors",
