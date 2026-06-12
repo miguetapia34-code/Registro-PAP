@@ -150,7 +150,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
   };
 
   // ✅ TU PLANTILLA COMPLETA
-  const plantilla = `VENTA PAP NRO: //${data.venta}
+  const plantilla = `VENTA PAP NRO:
 ✅VALIDACIÓN BIOMETRICA: ${data.biometrico}
 ✅SOT: ${data.sot}
 ✅PDV: ${data.pdv}
