@@ -1,9 +1,11 @@
 [ 
   {"departamento":"PIURA","provincia":"PIURA","distrito":"PIURA"},
   {"departamento":"PIURA","provincia":"PIURA","distrito":"CASTILLA"},
+  {"departamento":"PIURA","provincia":"PIURA","distrito":"TAMBO GRANDE"},
   {"departamento":"PIURA","provincia":"SULLANA","distrito":"SULLANA"},
   {"departamento":"PIURA","provincia":"TALARA","distrito":"PARIÑAS"},
   {"departamento":"PIURA","provincia":"PAITA","distrito":"PAITA"},
+  {"departamento":"PIURA","provincia":"MORROPON","distrito":"CHULUCANAS"},
   {"departamento":"PIURA","provincia":"SECHURA","distrito":"SECHURA"},
 
   {"departamento":"ANCASH","provincia":"AIJA","distrito":"AIJA"},
