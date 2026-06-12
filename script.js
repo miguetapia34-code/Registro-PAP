@@ -134,7 +134,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
 
   // ✅ Todos los datos para plantilla
   const data = {
-    venta: document.getElementById("venta").value,
+    //venta: document.getElementById("venta").value,
     sot: document.getElementById("sot").value,
     pdv: document.getElementById("pdv").value,
     coordinador: document.getElementById("coordinador").value,
