@@ -148,6 +148,9 @@ document.getElementById("formulario").addEventListener("submit", async function(
     provincia: prov.value,
     distrito: dist.value
   };
+  const linkMapa = data.coordenadas
+  ? `https://www.google.com/maps?q=${data.coordenadas.replace(" ", "")}`
+  : "";
 
   // ✅ TU PLANTILLA COMPLETA
   const plantilla = `VENTA PAP NRO:
