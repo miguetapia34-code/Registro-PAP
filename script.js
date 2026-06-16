@@ -153,7 +153,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
   : "";
 
   // ✅ TU PLANTILLA COMPLETA
-  const plantilla = `VENTA PAP NRO:
+  const plantilla = `VENTA NRO:
 ✅VALIDACIÓN BIOMETRICA: ${data.biometrico}
 ✅SOT: ${data.sot}
 ✅PDV: ${data.pdv}
@@ -178,6 +178,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
     formData.append("coordinador", data.coordinador);
     formData.append("contacto", data.contacto);
     formData.append("coordenadas", data.coordenadas);
+    formData.append("campania", data.campania);
     
     await fetch(URL_FLOW, {
       method: "POST",
