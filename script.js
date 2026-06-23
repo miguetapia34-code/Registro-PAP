@@ -154,6 +154,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
 
   // ✅ TU PLANTILLA COMPLETA
   const plantilla = `VENTA NRO:
+✅CAMPAÑA: ${data.campania}
 ✅VALIDACIÓN BIOMETRICA: ${data.biometrico}
 ✅SOT: ${data.sot}
 ✅PDV: ${data.pdv}
@@ -163,7 +164,6 @@ document.getElementById("formulario").addEventListener("submit", async function(
 🗺️ MAPA: ${linkMapa}
 ✅Contacto: ${data.contacto}
 ✅AUTORIZADO: ${data.autorizado}
-✅CAMPAÑA: ${data.campania}
 ✅ACCION: PROCEDER CON EL ENRUTAMIENTO A LA CUADRILLA DE INSTALACIONES PAP 
 ✅${data.departamento} – ${data.provincia} - ${data.distrito}`;
 
